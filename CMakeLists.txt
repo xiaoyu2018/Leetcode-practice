@@ -4,7 +4,7 @@ project(Algorithm VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(Algorithm 0013罗马数字转整数.cpp)
+add_executable(Algorithm 0014最长公共前缀.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

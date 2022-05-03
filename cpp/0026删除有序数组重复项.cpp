@@ -18,6 +18,7 @@ int RemoveDuplicates(vector<int>& nums)
     return slow + 1;
 }
 
+
 int main()
 {
     vector<int> v = {1, 1, 2, 2, 3};

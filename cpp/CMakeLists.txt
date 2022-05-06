@@ -4,7 +4,7 @@ project(Algorithm VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(Algorithm 0053最大子数组和.cpp)
+add_executable(Algorithm 0058最后一个单词的长度.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

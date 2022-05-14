@@ -4,7 +4,7 @@ project(Algorithm VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(Algorithm 0977有序数组的平方.cpp)
+add_executable(Algorithm 0209长度最小子数组.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

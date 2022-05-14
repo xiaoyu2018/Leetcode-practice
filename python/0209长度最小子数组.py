@@ -40,7 +40,7 @@ def minSubArrayLen2(target: int, nums:list):
     return res+1 if res<=len(nums) else 0
 
 
-# 滑动窗口
+# 滑动窗口(双指针)
 def minSubArrayLen3(target: int, nums:list):
     size=len(nums)
     res=size+1

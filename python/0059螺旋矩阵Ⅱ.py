@@ -1,6 +1,6 @@
 
 # 模拟
-def generateMatrix(n:int):
+def generateMatrix1(n:int):
     if(n==1):
         return [[1]]
 
@@ -34,4 +34,31 @@ def generateMatrix(n:int):
 
     return res
 
-print(generateMatrix(4))
+# 更加高效
+def generateMatrix2(n:int):
+    mat=[[0]*n for i in range(n)]
+    
+    crt_elem=1
+    loop_time=0
+    while(crt_elem<=n*n):
+
+        if(crt_elem==n*n):
+            mat[n//2][n//2]=crt_elem
+            break
+        for i in range(loop_time,n-loop_time-1):
+            mat[loop_time][i]=crt_elem
+            crt_elem+=1
+        for i in range(loop_time,n-loop_time-1):
+            mat[i][n-1-loop_time]=crt_elem
+            crt_elem+=1
+        for i in range(n-loop_time-1,loop_time,-1):
+            mat[n-1-loop_time][i]=crt_elem
+            crt_elem+=1
+        for i in range(n-loop_time-1,loop_time,-1):
+            mat[i][loop_time]=crt_elem
+            crt_elem+=1
+        
+        loop_time+=1
+    
+    return mat
+print(generateMatrix2(1))

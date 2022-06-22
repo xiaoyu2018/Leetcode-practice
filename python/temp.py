@@ -31,24 +31,25 @@
 # a[0][0]=1
 # print(a)
 
-class C1:
-    def show(self):
-        print("c1------------")
+# class C1:
+#     def show(self):
+#         print("c1------------")
 
-class C2(C1):
-    def show(self):
-        print("c2------------")
+# class C2(C1):
+#     def show(self):
+#         print("c2------------")
     
-    def foo(self):
-        self.show()
-        super().show()
+#     def foo(self):
+#         self.show()
+#         super().show()
     
-class C3(C2):
-    def show(self):
-        print("c3------------")
-        super().show()
+# class C3(C2):
+#     def show(self):
+#         print("c3------------")
+#         super().show()
 
-c3=C3()
-c3.foo()
-print("-------------------")
-c3.show()
+# c3=C3()
+# c3.foo()
+# print("-------------------")
+# c3.show()
+

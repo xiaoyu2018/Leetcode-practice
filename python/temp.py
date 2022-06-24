@@ -53,3 +53,65 @@
 # print("-------------------")
 # c3.show()
 
+class Node:
+    def __init__(self,val,next=None) -> None:
+        self.val=val
+        self.next=next
+    
+
+
+def create_tail():
+
+    head=Node(-1)
+    q=head
+
+    while(1):
+        val=input()
+        if(val==str(-1)):
+            break
+        
+        p=Node(val)
+        q.next=p
+        q=p
+    
+    return head
+
+def create_head(nums:list):
+    head=Node(-1)
+    
+    for i in nums:
+        p=Node(i)
+        p.next=head.next
+        head.next=p
+    return head
+def show(*head:Node):
+
+    if any([(not head),None in head]):
+        print(head)
+        return 
+
+    head=[i.next if i.val==-1 else i for i in head]
+    for h in head:
+        while(h):
+            print(f"{h.val} ")
+            h=h.next
+        print("\n")
+    
+def ReverseLinkList(head:Node):
+
+    if(not head or not head.next):
+        return head
+    
+    new_head=ReverseLinkList(head.next)
+    p=new_head
+    while(p.next):
+        p=p.next
+    p.next=head
+    
+    head.next=None
+    return new_head
+
+# l1=create_tail()
+l2=create_head([1,2,3,4,5])
+l2=ReverseLinkList(l2.next)
+show(l2)

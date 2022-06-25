@@ -4,7 +4,7 @@ project(Algorithm VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(Algorithm 0232用栈实现队列.cpp)
+add_executable(Algorithm 0020有效的括号.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include<stack>
 #include<map>
 using namespace std;
@@ -8,33 +7,38 @@ using namespace std;
 // 栈
 bool isValid(string s)
 {
-    stack<char> st;
-    map<char, char> brackets_map = {
-        {']','['},
-        {')','('},
-        {'}','{'},
+    map<char, char> m = {
+        {'[',']'},
+        {'{','}'},
+        {'(',')'}
     };
 
-    for (int i = 0; s[i] != '\0'; ++i)
+    stack<char> st;
+
+    if(m.find(s[0])==m.end())
+        return false;
+    
+    st.push(s[0]);
+
+    for (int i = 1;i<s.size();++i)
     {
-        if(s[i]=='('||s[i]=='['||s[i]=='{')
+        if (!(m.find(s[i]) == m.end()))
             st.push(s[i]);
+        
         else
         {
-            if(not st.size())
+            if(st.empty()||m[st.top()]!=s[i])
                 return false;
-            char top_val = st.top();
+
             st.pop();
-            if(top_val!=brackets_map[s[i]])
-                return false;
         }
     }
 
-    return !st.size();
+    return st.empty() ? true : false;
 }
 
 int main()
 {
-    string s = "";
+    string s = "(){}}{";
     cout << isValid(s);
 }

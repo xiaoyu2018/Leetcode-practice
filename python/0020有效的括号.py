@@ -1,22 +1,20 @@
-s="[]"
+s="}"
 
 # 栈
 def isValid(s: str) -> bool:
-    bracket_map={"}":"{","]":"[",")":"("}
-    stack=[]
-    
-    for i in s:
-        if(i not in bracket_map):
-            stack.append(i)
+    m={'(':')','[':']','{':'}'}
+
+    st=[]
+
+    for c in s:
+        if(c in m.keys()):
+            st.append(c)
+        elif(not st or m[st.pop()]!=c):
+            return False
+        
+    return True if not st else False
             
-        else:
-            if(not stack):
-                return False
 
-            top=stack.pop()
-            if(bracket_map[i]!=top):
-                return False
 
-    return not stack
-    
+
 print(isValid(s))

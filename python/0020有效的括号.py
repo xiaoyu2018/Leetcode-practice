@@ -17,4 +17,4 @@ def isValid(s: str) -> bool:
 
 
 
-print(isValid(s))
+print([isValid(s)])

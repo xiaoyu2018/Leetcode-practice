@@ -5,7 +5,7 @@ def maxSlidingWindow1(nums: list, k: int) -> list:
 
     return[max(nums[i:i+k]) for i in range(len(nums)-k+1)]
 
-# 单调队列
+# 单调队列（适合动态寻找最值）
 def maxSlidingWindow2(nums: list, k: int) -> list:
     class OrderedQueue:
         def __init__(self,nums:list) -> None:

@@ -1,7 +1,5 @@
 from binarytree import pre_create,TreeNode
 
-
-
 def preorderTraversal(root: TreeNode) -> list:
     res=[]
     def _pot(r:TreeNode):

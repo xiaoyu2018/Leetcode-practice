@@ -17,7 +17,10 @@ struct TreeNode
 TreeNode* Create(deque<int>& dq)
 {
     if(dq.empty()||dq.front()==NULL)
+    {
+        dq.pop_front();
         return nullptr;
+    }
 
     int val = dq.front();
     dq.pop_front();
@@ -25,4 +28,6 @@ TreeNode* Create(deque<int>& dq)
     TreeNode *node = new TreeNode(val);
     node->left = Create(dq);
     node->right = Create(dq);
+
+    return node;
 }

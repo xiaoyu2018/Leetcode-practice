@@ -1,6 +1,7 @@
 #include "mybitree.h"
 #include <vector>
 
+// 递归
 void Traversal(TreeNode *root, vector<int> &res)
 {
     if (root)

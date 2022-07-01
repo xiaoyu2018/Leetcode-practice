@@ -1,6 +1,7 @@
 from binarytree import pre_create,TreeNode
 
-def preorderTraversal(root: TreeNode) -> list:
+# 递归
+def preorderTraversal1(root: TreeNode) -> list:
     res=[]
     def _pot(r:TreeNode):
         
@@ -13,5 +14,24 @@ def preorderTraversal(root: TreeNode) -> list:
     
     return res
 
+# 迭代
+def preorderTraversal2(root: TreeNode):
+    res=[]
+    if(not root):
+        return res
+    
+    st=[root]
 
-print(preorderTraversal(pre_create([1,None,2,3])))
+    while(st):
+        top=st.pop()
+        res.append(top.val)
+
+        if(top.right):
+            st.append(top.right)
+        if(top.left):
+            st.append(top.left)
+    
+    return res
+
+
+print(preorderTraversal2(pre_create([1,None,2,3])))

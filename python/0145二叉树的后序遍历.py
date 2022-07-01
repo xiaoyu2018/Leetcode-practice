@@ -12,6 +12,8 @@ def postorderTraversal1(root: TreeNode) -> list:
     _iot(root)
     return res
 
+
+# 按前序规则入栈，但先让子节点出栈
 def postorderTraversal2(root:TreeNode):
     res=[]
 

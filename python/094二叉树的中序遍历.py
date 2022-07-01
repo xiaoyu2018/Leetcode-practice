@@ -39,5 +39,4 @@ def inorderTraversal2(root: TreeNode) -> list:
         
     return res
 
-
 print(inorderTraversal2(pre_create([1,None,2,3])))

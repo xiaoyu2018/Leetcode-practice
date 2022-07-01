@@ -35,7 +35,7 @@ void Traversal2(TreeNode* root,vector<int>&res)
 vector<int> preorderTraversal(TreeNode *root)
 {
     vector<int> res;
-    if(root=nullptr)
+    if(root==nullptr)
         return res;
     Traversal2(root, res);
 

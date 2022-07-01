@@ -18,7 +18,8 @@ TreeNode* Create(deque<int>& dq)
 {
     if(dq.empty()||dq.front()==NULL)
     {
-        dq.pop_front();
+        if(not dq.empty())
+            dq.pop_front();
         return nullptr;
     }
 

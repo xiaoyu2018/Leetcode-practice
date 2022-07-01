@@ -1,6 +1,6 @@
 from binarytree import *
 
-def inorderTraversal(root: TreeNode) -> list:
+def postorderTraversal1(root: TreeNode) -> list:
     res=[]
     def _iot(r:TreeNode):
 
@@ -12,3 +12,30 @@ def inorderTraversal(root: TreeNode) -> list:
     _iot(root)
     return res
 
+def postorderTraversal2(root:TreeNode):
+    res=[]
+
+    if(not root):
+        return res
+    
+    st=[root]
+    memo=[None]
+
+    while(st):
+        top=st[-1]
+
+        if(top.left in memo and top.right in memo):
+            res.append(st.pop().val)
+            memo.append(top)
+        
+        else:
+            if(top.right):
+                st.append(top.right)
+            if(top.left):
+                st.append(top.left)
+        
+        
+    return res
+
+
+print(postorderTraversal2(pre_create([1,None,2,3])))

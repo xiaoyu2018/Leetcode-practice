@@ -1,5 +1,6 @@
 #include "mybitree.h"
 #include <vector>
+#include <stack>
 
 // 递归
 void Traversal(TreeNode *root, vector<int> &res)
@@ -12,11 +13,23 @@ void Traversal(TreeNode *root, vector<int> &res)
     }
 }
 
+void Traversal2(TreeNode *root, vector<int> &res)
+{
+    stack<TreeNode *> st;
+    st.push(root);
+
+    while(!st.empty())
+    {
+        if()
+    }
+}
 
 vector<int> postorderTraversal(TreeNode *root)
 {
     vector<int> res;
-    Traversal(root, res);
+    if(root==nullptr)
+        return res;
+    Traversal2(root, res);
 
     return res;
 }

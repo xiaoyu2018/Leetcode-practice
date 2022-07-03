@@ -1,4 +1,4 @@
-from binarytree import pre_create,TreeNode
+from binarytree import pre_create,TreeNode,level_create
 
 # 递归
 def preorderTraversal1(root: TreeNode) -> list:
@@ -34,4 +34,4 @@ def preorderTraversal2(root: TreeNode):
     return res
 
 
-print(preorderTraversal2(pre_create([1,None,2,3])))
+print(preorderTraversal2(level_create([1,2,3,4,5,6,7])))

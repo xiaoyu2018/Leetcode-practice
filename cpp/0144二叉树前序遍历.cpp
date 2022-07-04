@@ -45,7 +45,7 @@ vector<int> preorderTraversal(TreeNode *root)
 int main()
 {
     deque<int> dq = {1,NULL, 2, 3};
-    TreeNode *root = Create(dq);
+    TreeNode *root = PreCreate(dq);
 
     vector<int> res = preorderTraversal(root);
 

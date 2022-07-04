@@ -3,6 +3,7 @@
 #include <stack>
 #include<algorithm>
 
+
 // 递归
 void Traversal(TreeNode *root, vector<int> &res)
 {

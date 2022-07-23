@@ -4,7 +4,7 @@ project(Algorithm VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(Algorithm 0257二叉树的所有路径.cpp)
+add_executable(Algorithm 0235二叉搜索树的最近公共祖先.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

@@ -77,8 +77,23 @@ def maxSubArray3(nums):
     print(res)
 
 
+# 贪心（最快）
+@timer
+def maxSubArray4(nums:list):
+    res=nums[0]
+    temp=nums[0]
+
+    for i in nums[1:]:
+        if(temp<0):
+            temp=i
+        else:
+            temp+=i
+        res=max(res,temp)
+    
+    print(res)
+
 maxSubArray1(nums)
 maxSubArray2(nums)
 maxSubArray3(nums)
-
+maxSubArray4(nums)
     

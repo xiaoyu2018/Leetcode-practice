@@ -8,4 +8,3 @@ def maxProfit(prices: list) -> int:
         prev=i
 
     return res 
-

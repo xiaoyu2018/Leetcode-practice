@@ -9,21 +9,19 @@ def climbStairs1(n):
     
     return climbStairs1(n-1)+climbStairs1(n-2)
 
-# 迭代
+# dp
 def climbStairs2(n):
-    if(n==1):
-        return 1
-    if(n==2):
-        return 2
+    if(n in [1,2]):
+        return n
+
     x1,x2=1,2
     res=0
     
-    while(n-2>0):
+    for _ in range(3,n+1):
         res=x1+x2
         x1=x2
         x2=res
-        n-=1
     
     return res
 
-print(climbStairs2(5))
+print(climbStairs2(4))

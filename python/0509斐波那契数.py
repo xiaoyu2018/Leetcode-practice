@@ -33,16 +33,16 @@ def Fibo3(n: int):
     
     return dp[n]
 
-# 实际上维护两个值即可
+# 实际上动态维护两个值即可
 def Fibo3(n: int):
     if(n==0 or n==1):
         return n
     dp=[0,1]
-    res=0
-    for _ in range(2,n+1):
-        res=dp[0]+dp[1]
-        dp[0]=dp[1]
-        dp[1]=res
     
-    return res
-print(Fibo3(100))
+    for _ in range(2,n+1):
+        temp=dp[1]
+        dp[1]=dp[0]+dp[1]
+        dp[0]=temp
+    
+    return dp[1]
+print(Fibo3(5))

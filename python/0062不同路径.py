@@ -48,12 +48,8 @@ def uniquePaths2(m: int, n: int) ->int:
 # 5
 def uniquePaths3(m: int, n: int) ->int:
     
-    dp=[[0]*n for _ in range(m)]
-    dp[0]=[1]*n
+    dp=[[1]*n for _ in range(m)]
     
-    for i in range(m):
-        dp[i][0]=1
-
     for i in range(1,m):
         for j in range(1,n):
             

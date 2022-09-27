@@ -1,7 +1,4 @@
 
-
-# dp[i]为数字i能拆分成的最大乘积
-# 
 def integerBreak(n: int) -> int:
 
     dp=[0]*(n+1)

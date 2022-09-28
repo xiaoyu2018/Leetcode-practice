@@ -31,9 +31,10 @@ def zero_one_bag_1D(weight:list,value:list,capcity:int)->int:
     dp[weight[0]:]=[value[0]]*(n-weight[0])
 
     for i in range(1,m):
-        for j in range(1,n):
-            if(j>=weight[i]):
-                dp[j]=max(dp[j],dp[j-weight[i]]+value[i])
+        for j in range(n-1,0,-1):
+            if(j<weight[i]):
+                break
+            dp[j]=max(dp[j],dp[j-weight[i]]+value[i])
     return dp[n-1]
     
 print(zero_one_bag_1D([1,3,4],[15,20,30],4))

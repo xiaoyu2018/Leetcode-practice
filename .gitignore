@@ -11,3 +11,6 @@ CTestTestfile.cmake
 _deps
 .cmake
 build/
+csharp/bin
+csharp/obj
+.vscode/

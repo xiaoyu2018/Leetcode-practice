@@ -1,2 +1,2 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+System.Console.WriteLine(new Solution().CanPartition1(new int[]{1, 2, 5}));

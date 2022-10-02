@@ -1,2 +1,2 @@
 ﻿
-System.Console.WriteLine(new Solution().CanPartition1(new int[]{1, 2, 5}));
+System.Console.WriteLine(new Solution().LastStoneWeightII(new int[]{1, 1, 1, 1, 1}));

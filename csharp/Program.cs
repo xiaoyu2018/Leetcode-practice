@@ -1,2 +1,2 @@
 ﻿
-System.Console.WriteLine(new Solution().LastStoneWeightII(new int[]{1, 1, 1, 1, 1}));
+System.Console.WriteLine(new Solution().FindTargetSumWays(new int[]{1,0},1));

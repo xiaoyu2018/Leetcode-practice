@@ -1,2 +1,3 @@
 ﻿
-System.Console.WriteLine(new Solution().FindTargetSumWays(new int[] { 1, 0 }, 1));
+System.Console.WriteLine(new Solution().BeautifulBouquet(new int[]{1, 10, 1, 10, 1, 10 },2));
+// System.Console.WriteLine(0);

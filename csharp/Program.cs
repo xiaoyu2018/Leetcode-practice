@@ -1,3 +1,3 @@
 ﻿
-System.Console.WriteLine(new Solution().BeautifulBouquet(new int[]{1, 10, 1, 10, 1, 10 },2));
+System.Console.WriteLine(new Solution().CompletePack(new int[]{1,3,4},new int[]{15,20,30}));
 // System.Console.WriteLine(0);

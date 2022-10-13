@@ -24,4 +24,19 @@ def climbStairs2(n):
     
     return res
 
-print(climbStairs2(4))
+# 01背包
+# 可重复选爬1阶或爬2阶，容量为n阶的完全01背包
+# 且是完全排列背包
+def climbStairs3(n):
+    dp=[0]*(n+1)
+    dp[0]=1
+
+    # 先遍历容量，再遍历物品
+    for j in range(n+1):
+        for i in range(1,3):
+            if(j>=i):
+                dp[j]+=dp[j-i]
+    return dp[-1]
+
+
+print(climbStairs3(5))

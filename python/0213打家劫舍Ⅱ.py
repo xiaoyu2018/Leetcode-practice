@@ -17,7 +17,7 @@ def rob(nums: list) -> int:
 
         for i in range(2,size-1):
             dp[i]=max(dp[i-2]+ns[i],dp[i-1])
-        return dp[-1]     
+        return dp[-1]
     
 
     return max(_rob(nums[1:]),_rob(nums[:-1]))

@@ -64,4 +64,34 @@ def maxProfit3(prices:list):
     
     return res
 
-print(maxProfit2(prices))
+
+
+def mp1(prices:list):
+    memo=dict() #记录第i天及以后的最大值
+    memo[len(prices)-1]=0
+    def _gp(index:int):
+        if(index<len(prices)-1):
+            
+            memo[index]=max(prices[index+1],memo[index+1])
+            res=memo[index]-prices[index]
+            return res if res>0 else 0
+        return 0
+   
+    return max([_gp(i) for i in range(len(prices)-1,-1,-1)])
+
+
+def mp2(prices:list):
+    max_val=0
+    res=0
+    for i in prices[::-1]:
+        res=max(res,max_val-i)
+        max_val=max(i,max_val)
+
+    return res
+
+# 动态规划
+def mp3(prices:list):
+    ...
+    
+print(mp2(prices))
+

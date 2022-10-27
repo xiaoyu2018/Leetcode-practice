@@ -91,7 +91,17 @@ def mp2(prices:list):
 
 # 动态规划
 def mp3(prices:list):
-    ...
+    # dp[i][0]，第i天持有股票的最小花费（也就是第i天及之前的最低股票价格）
+    # dp[i][1]，第i天不持有股票的最大利润（也就是第i天及之前的卖出股票能得到最大利润）
+    size=len(prices)
+    dp=[[0,0]]*size
+    dp[0][0]=-prices[0]
+    dp[0][1]=0
+
+    for i in range(1,size):
+        dp[i][0]=max(dp[i-1][0],-prices[i])
+        dp[i][1]=max(dp[i-1][1],prices[i]+dp[i-1][0])
     
-print(mp2(prices))
+    return dp[size-1][1]
+print(mp3(prices))
 

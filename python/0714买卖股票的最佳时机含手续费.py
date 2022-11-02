@@ -1,7 +1,6 @@
 
 # 贪心
 def maxProfit(prices:list, fee: int) -> int:
-
     # 在买入时计算上手续费，有一次买入了必然要有一次卖出，手续费不会计算错误
     buy=prices[0]+fee
     res=0
@@ -19,5 +18,19 @@ def maxProfit(prices:list, fee: int) -> int:
     
     return res
 
-print(maxProfit([1,3,2,8,4,9],2))
+# dp
+# 0 持有股票状态
+# 1 不持有股票状态
+def maxProfit1(prices:list, fee: int) -> int:
+    dp=[-prices[0],0]
+
+    for price in prices:
+        dp[0]=max(dp[0],dp[1]-price)
+        dp[1]=max(dp[1],dp[0]+price-fee)
+    
+    return dp[-1]
+
+
+
+print(maxProfit1([1,3,2,8,4,9],2))
 

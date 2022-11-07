@@ -33,8 +33,6 @@ public partial class Solution
             }
             dp[0] = nums1[i] == nums2[0] ? 1 : 0;
         }
-        
-
         return res;
     }
 }

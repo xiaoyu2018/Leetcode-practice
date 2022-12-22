@@ -5,7 +5,7 @@ public partial class Solution
     public int NumWays(int n)
     {
         if(n<2)
-            return 1;
+            return 1; 
         int n1, n2;
 
         n1 = memo.Keys.Contains(n - 1) ? memo[n - 1] : NumWays(n - 1);

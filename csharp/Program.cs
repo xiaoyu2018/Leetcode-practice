@@ -1,3 +1,3 @@
 ﻿
 
-new Solution().MyPow(1.00000, -2147483648);
+System.Console.WriteLine(new Solution().MajorityElement(new int[] { 1, 2, 3, 2, 2, 2, 5, 4, 2 }));;

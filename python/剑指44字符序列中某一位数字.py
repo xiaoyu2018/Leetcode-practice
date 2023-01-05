@@ -40,3 +40,4 @@ def findNthDigit1(n: int) -> int:
 
 
 print(findNthDigit1(0))
+

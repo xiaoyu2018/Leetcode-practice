@@ -111,7 +111,9 @@ def ReverseLinkList(head:Node):
     head.next=None
     return new_head
 
-# l1=create_tail()
-l2=create_head([1,2,3,4,5])
-l2=ReverseLinkList(l2.next)
-show(l2)
+# # l1=create_tail()
+# l2=create_head([1,2,3,4,5])
+# l2=ReverseLinkList(l2.next)
+# show(l2)
+
+print(pow(2,1/30)-1)

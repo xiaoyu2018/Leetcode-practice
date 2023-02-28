@@ -14,3 +14,5 @@ build/
 csharp/bin
 csharp/obj
 .vscode/
+java/bin
+java/lib

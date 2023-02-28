@@ -1,5 +1,5 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        new BM2链表内指定区间反转().reverseBetween(null, 0, 0);
     }
 }

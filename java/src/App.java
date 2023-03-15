@@ -1,5 +1,8 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        new BM2链表内指定区间反转().reverseBetween(null, 0, 0);
+        System.out.println(
+            new LC0209长度最小的子数组().minSubArrayLen(
+                7,
+                new int[]{ 2, 3, 1, 2, 4, 3}));
     }
 }

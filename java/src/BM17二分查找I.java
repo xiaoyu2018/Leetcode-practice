@@ -1,9 +1,9 @@
 public class BM17二分查找I {
-    public int search(int[] nums, int target) {
+    // [l,r]查找
+    public int search1(int[] nums, int target) {
         int l = 0, r = nums.length - 1;
         int mid;
-        while(l<=r)
-        {
+        while (l <= r) {
             mid = l + ((r - l) >> 1);
             if (nums[mid] == target)
                 return mid;
@@ -12,6 +12,25 @@ public class BM17二分查找I {
             else
                 l = mid + 1;
         }
+        return -1;
+    }
+
+    // [l,r)查找
+    public int search2(int[] nums,int target)
+    {
+        int l = 0, r = nums.length;
+        int m;
+        while(l<r)
+        {
+            m = l + ((r - l) >> 1);
+            if (nums[m] == target)
+                return m;
+            else if (nums[m] > target)
+                r = m;
+            else
+                l = m + 1;
+        }
+        
         return -1;
     }
 }

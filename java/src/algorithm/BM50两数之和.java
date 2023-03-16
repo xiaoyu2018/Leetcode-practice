@@ -1,3 +1,5 @@
+package algorithm;
+
 import java.util.Hashtable;
 import java.util.Map;
 

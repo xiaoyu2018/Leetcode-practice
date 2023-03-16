@@ -1,3 +1,5 @@
+package algorithm;
+
 public class BM18二维数组中的查找 {
     public boolean Find(int target, int[][] array) {
         int m = array.length;

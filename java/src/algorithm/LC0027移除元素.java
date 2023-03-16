@@ -1,3 +1,5 @@
+package algorithm;
+
 public class LC0027移除元素 {
     public int removeElement(int[] nums, int val) {
         int l = 0, r = nums.length - 1;

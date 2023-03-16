@@ -1,3 +1,4 @@
+package algorithm;
 public class BM17二分查找I {
     // [l,r]查找
     public int search1(int[] nums, int target) {

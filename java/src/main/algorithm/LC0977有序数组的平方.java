@@ -1,4 +1,4 @@
-package algorithm;
+package main.algorithm;
 public class LC0977有序数组的平方 {
     public int[] sortedSquares(int[] nums) {
         int size=nums.length;

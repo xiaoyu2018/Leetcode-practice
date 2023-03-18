@@ -1,4 +1,4 @@
-package algorithm;
+package main.algorithm;
 
 public class ListNode {
     int val;

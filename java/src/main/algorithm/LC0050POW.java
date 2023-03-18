@@ -1,4 +1,4 @@
-package algorithm;
+package main.algorithm;
 
 public class LC0050POW {
     private double _calc(double x, long n)

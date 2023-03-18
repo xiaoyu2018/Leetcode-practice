@@ -1,3 +1,4 @@
+package main;
 import algorithm.*;
 
 public class App {

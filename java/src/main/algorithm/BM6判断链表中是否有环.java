@@ -1,4 +1,4 @@
-package algorithm;
+package main.algorithm;
 public class BM6判断链表中是否有环 {
     public boolean hasCycle(ListNode head) {
         ListNode p1, p2;

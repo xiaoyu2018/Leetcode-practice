@@ -1,5 +1,5 @@
 package main;
-import algorithm.*;
+import main.algorithm.*;
 
 public class App {
     public static void main(String[] args) throws Exception {

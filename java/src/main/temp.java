@@ -2,8 +2,15 @@ package main;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.time.LocalDate;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Stack;
 
 public class temp {
 
@@ -45,9 +52,25 @@ public class temp {
         // l5.set(0, "ad");
         
         // l1.add(Integer.valueOf(213));
-        LocalDate d = LocalDate.now();
-        d.getYear();
-        System.out.println(d);
+        // LocalDate d = LocalDate.now();
+        // d.getYear();
+        // System.out.println(d);
+
+        List<Integer> l1 = List.of(1, 2, 33);
+        List<String> l2 = new ArrayList<>();
+        for(int i=0;i<10;i++)
+        {
+            // l1.add(i);
+            l2.add(String.valueOf(i));
+        }
+
+        Map<Student, Integer> memo = new HashMap<>();
+        Student s1 = new Student("002", 22, "Tim");
+        memo.put(new Student("001", 22, "Tom"), 565);
+        memo.put(new Student("002", 22, "Tim"), 575);
+        System.out.println(memo.get(s1));
+        
+        
     }
 }
 
@@ -106,7 +129,7 @@ class Person
     }
 }
 
-class Student extends Person
+class Student extends Person 
 {
     private String ID;
     public Student() {
@@ -120,7 +143,26 @@ class Student extends Person
     
     public void study()
     {
-        System.out.println(name+"is studying...");
+        System.out.println(name + "is studying...");
+    }
+    
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(ID, name, age);
+    }
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if(o instanceof Student)
+        {
+            Student s = (Student) o;
+            return s.name.equals(this.name)&&
+                    s.age == this.age&&
+                    s.ID.equals(this.ID);
+        }
+        return false;
     }
     
 }

@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 import java.time.LocalDate;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -11,6 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Stack;
+import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 public class temp {
 
@@ -38,7 +41,7 @@ public class temp {
         // m1.invoke(ds, null);
         // Class t2 = t1.getInterfaces()[0];
         // System.out.println(t2.getName());
-        
+
         // Student s = Student.class.getConstructor().newInstance();
         // s.study();
         // List<Integer> arr = new ArrayList<>();
@@ -50,7 +53,7 @@ public class temp {
 
         // List<? super String> l5 = l3;
         // l5.set(0, "ad");
-        
+
         // l1.add(Integer.valueOf(213));
         // LocalDate d = LocalDate.now();
         // d.getYear();
@@ -58,8 +61,7 @@ public class temp {
 
         List<Integer> l1 = List.of(1, 2, 33);
         List<String> l2 = new ArrayList<>();
-        for(int i=0;i<10;i++)
-        {
+        for (int i = 0; i < 10; i++) {
             // l1.add(i);
             l2.add(String.valueOf(i));
         }
@@ -69,9 +71,14 @@ public class temp {
         memo.put(new Student("001", 22, "Tom"), 565);
         memo.put(new Student("002", 22, "Tim"), 575);
         System.out.println(memo.get(s1));
-        
+
+        Stream<String> st = Stream.of("2020-01-01", "2021-02-03", "2025-06-05");
+
+        st.map(x -> LocalDate.parse(x))
+          .forEach(System.out::println);
         
     }
+    
 }
 
 

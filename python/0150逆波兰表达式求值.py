@@ -1,46 +1,30 @@
 
-class CalcFactory:
-    def __init__(self,a,b) -> None:
-        self.a=a
-        self.b=b
-    
-    def get_result():
-        pass
-    
-class Add(CalcFactory):
-    def __init__(self, a, b) -> None:
-        super().__init__(a, b)
-    def get_result(self):
-        return self.a+self.b
-class Sub(CalcFactory):
-    def __init__(self, a, b) -> None:
-        super().__init__(a, b)
-    def get_result(self):
-        return self.a-self.b
-class Mul(CalcFactory):
-    def __init__(self, a, b) -> None:
-        super().__init__(a, b)
-    def get_result(self):
-        return self.a*self.b
-class Div(CalcFactory):
-    def __init__(self, a, b) -> None:
-        super().__init__(a, b)
-    def get_result(self):
-        return self.a/self.b
-
-
 def evalRPN(tokens: list) -> int:
-    st=[]
-    m={'+':Add,'-':Sub,'*':Mul,'/':Div}
+    def _add(a,b):
+        return a+b
+    def _sub(a,b):
+        return a-b
+    def _mul(a,b):
+        return a*b
     
-    for i in tokens:
-        if(i in m.keys()):
-            v2=st.pop()
-            v1=st.pop()
-            f=m[i](int(v1),int(v2))
-            st.append(f.get_result())
-        else:
-            st.append(int(i))
-    return st[0]
 
-print(evalRPN( ["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]))
+    memo={
+        "+":_add,
+        "-":_sub,
+        "*":_mul,
+        "/":lambda x,y:int(x/y) #注意运算符“//”是地板除，负数和题目要求向0截断不符
+        }
+
+    st=[]
+
+    for c in tokens:
+        if(c in memo.keys()):
+            a=st.pop()
+            b=st.pop()
+            st.append(memo[c](int(b),int(a)))
+        else:
+            st.append(c)
+
+    return int(st[0])
+
+print(evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))

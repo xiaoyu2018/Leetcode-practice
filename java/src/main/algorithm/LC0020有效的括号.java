@@ -16,21 +16,18 @@ public class LC0020有效的括号 {
         m1.put('{', '}');
 
         for (char c : s.toCharArray()) {
-            if(m1.keySet().contains(c))
-            {
+            if (m1.keySet().contains(c)) {
                 stack.add(c);
             }
-            
-            else if(m1.values().contains(c))
-            {
+
+            else if (m1.values().contains(c)) {
                 Character crt = stack.pollLast();
                 if (crt == null || c != m1.get(crt))
                     return false;
-            }
-            else
+            } else
                 return false;
         }
-        
+
         return stack.isEmpty();
     }
 }

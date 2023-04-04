@@ -9,4 +9,5 @@ def twoSum(nums: list, target: int):
             return [i,memo[target-e]]
         
         memo[e]=i
+    return None
     

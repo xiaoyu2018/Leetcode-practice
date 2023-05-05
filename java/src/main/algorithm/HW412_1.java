@@ -1,7 +1,6 @@
 package main.algorithm;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class HW412_1 {
     

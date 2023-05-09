@@ -34,4 +34,3 @@ while(len(q)):
 print(res if cnt==N else -1)
 
 # ----------no.2-------------
-
